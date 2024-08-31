@@ -1,3 +1,9 @@
+/**
+ * A dropdown menu component that displays the user's avatar and provides a logout option.
+ *
+ * @param userImg - The URL of the user's avatar image.
+ * @param onItemClicked - A callback function that is called when a menu item is clicked, with the key of the clicked item as the argument.
+ */
 import { Avatar, AvatarImage } from '../ui/avatar';
 import {
   DropdownMenu,
