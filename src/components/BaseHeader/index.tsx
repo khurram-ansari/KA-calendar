@@ -1,6 +1,7 @@
 import { useAuth } from '@/contexts/useAuth';
 import { useNavigate } from 'react-router-dom';
 import UserDropdown from '../UserDropdown';
+import BrandLogo from '../BrandLogo';
 
 const BaseHeader = () => {
   const { session, logout } = useAuth();
@@ -26,6 +27,9 @@ const BaseHeader = () => {
   return (
     <header className="h-16 border-b p-2">
       <div className="container flex h-full items-center justify-between">
+        {/* BRAND LOGO */}
+        <BrandLogo />
+
         {/* USER AVATAR AND DROPDOWN */}
         {user && (
           <UserDropdown
