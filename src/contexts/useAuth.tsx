@@ -33,7 +33,8 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: 'http://localhost:5173/calendar',
+        redirectTo:
+          window.location.protocol + '//' + window.location.host + '/calendar',
         queryParams: {
           access_type: 'offline',
           prompt: 'consent',
